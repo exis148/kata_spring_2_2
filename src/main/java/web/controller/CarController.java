@@ -12,7 +12,7 @@ import web.dao.CarDao;
 
 @Component
 @Controller
-@RequestMapping("/car")
+@RequestMapping("/cars")
 public class CarController {
 
 
