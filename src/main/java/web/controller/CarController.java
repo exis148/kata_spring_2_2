@@ -17,15 +17,15 @@ public class CarController {
 
 
     @Autowired
-    private CarDao personDao;
+    private CarDao carDao;
 
 
     @GetMapping()
     public String car(@RequestParam(value = "count", required = false) Integer count, Model model) {
         if (count == null) {
-            model.addAttribute("cars", personDao.showAll());
+            model.addAttribute("cars", carDao.showAll());
         } else {
-            model.addAttribute("cars", personDao.index(count));
+            model.addAttribute("cars", carDao.index(count));
         }
         return "cars";
     }
