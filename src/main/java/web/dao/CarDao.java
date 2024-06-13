@@ -10,9 +10,9 @@ import java.util.List;
 @Component
 public class CarDao {
 
-
     private List<Car> car;
 
+public CarDao() {}
 
     {
         car = new ArrayList<>();
@@ -21,7 +21,6 @@ public class CarDao {
         car.add(new Car(3, "buhanka", "1911"));
         car.add(new Car(4, "VAZ", "2107"));
         car.add(new Car(5, "Toyota", "2002"));
-
 
     }
 
@@ -43,12 +42,8 @@ public class CarDao {
         return car;
     }
 
-
-
     public List <Car> showAll() {
-
         return car;
     }
-
 
 }
