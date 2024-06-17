@@ -17,14 +17,15 @@ import web.service.CarService;
 public class CarController {
 
     @Autowired
-    private CarService carDao;
+    private CarService carService;
+
 
     @GetMapping()
     public String car(@RequestParam(value = "count", required = false) Integer count, Model model) {
         if (count == null) {
-        model.addAttribute("cars", carDao.showAll());
+        model.addAttribute("cars", carService.showAll());
              } else {
-            model.addAttribute("cars", carDao.index(count));
+            model.addAttribute("cars", carService.index(count));
             }
             return "cars";
         }

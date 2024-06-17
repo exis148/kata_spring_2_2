@@ -12,7 +12,8 @@ public class CarDao {
 
     private List<Car> car;
 
-public CarDao() {}
+    public CarDao() {
+    }
 
     {
         car = new ArrayList<>();
@@ -24,25 +25,8 @@ public CarDao() {}
 
     }
 
-    public List<Car> index(int count) {
 
-        if(count<0){
-            return car;
-        }
-
-        if (count <= car.toArray().length) {
-            List<Car> result = new ArrayList<>();
-
-            for (int i = 0; i < count; i++) {
-                result.add(car.get(i));
-            }
-
-            return result;
-        }
-        return car;
-    }
-
-    public List <Car> showAll() {
+    public List<Car> showAll() {
         return car;
     }
 
